@@ -1,0 +1,26 @@
+
+server:
+  port: 8080
+  host: localhost
+  debug: true
+  max_connections: 1000
+  request_timeout: 30
+  ssl_enabled: true
+database:
+  url: postgresql://localhost
+  pool_size: 10
+  max_overflow: 20
+  connection_timeout: 5
+  idle_timeout: 300
+cache:
+  enabled: true
+  ttl: 3600
+  backend: redis
+  max_size: 1000
+logging:
+  level: debug
+  format: json
+  outputs:
+    - stdout
+    - file
+  file_path: /var/log/app.log

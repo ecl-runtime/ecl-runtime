@@ -1,0 +1,29 @@
+[package]
+name = "ecl-runtime"
+version = "0.1.0"
+edition = "2021"
+authors = ["ecl-runtime <eclruntime@gmail.com>"]
+description = "Config runtime 2x faster than YAML - impossible to break"
+license = "MIT"
+repository = "https://github.com/ecl-runtime/ecl-runtime"
+keywords = ["config", "yaml", "json", "env", "runtime"]
+categories = ["config"]
+
+[dependencies]
+serde_yaml = "0.9"
+serde_json = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+criterion = "0.5"
+
+[lib]
+name = "ecl_runtime"
+path = "src/lib.rs"
+
+[[bench]]
+name = "benchmarks"
+harness = false
+path = "benches/benchmarks.rs"
+

@@ -1,0 +1,17 @@
+
+{
+  "server": {
+    "port": 8080,
+    "host": "localhost",
+    "debug": true,
+    "max_connections": 1000
+  },
+  "database": {
+    "url": "postgresql://localhost",
+    "pool_size": 10
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 3600
+  }
+}
